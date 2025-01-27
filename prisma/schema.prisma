@@ -129,7 +129,7 @@ model JobPost {
   jobDescription  String
   listingDuration Int
   benefits        String[]
-  userId          String        @unique
+  userId          String
   status          JobPostStatus @default(DRAFT)
   applications    Int           @default(0)
 
