@@ -143,6 +143,7 @@ export async function createJob(data: z.infer<typeof jobSchema>) {
       salaryTo: validatedData.salaryTo,
       listingDuration: validatedData.listingDuration,
       benefits: validatedData.benefits,
+      userId: user?.id ?? ''
     },
   });
 
