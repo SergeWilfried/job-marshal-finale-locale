@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = ENV("DATABASE_URL")
+  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -129,9 +129,9 @@ model JobPost {
   jobDescription  String
   listingDuration Int
   benefits        String[]
-
-  status       JobPostStatus @default(DRAFT)
-  applications Int           @default(0)
+  userId          String        @unique
+  status          JobPostStatus @default(DRAFT)
+  applications    Int           @default(0)
 
   company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
   companyId String
