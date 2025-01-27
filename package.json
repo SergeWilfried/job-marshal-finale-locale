@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "engineStrict": true,
   "dependencies": {
     "@arcjet/ip": "1.0.0-beta.1",
     "@arcjet/next": "1.0.0-beta.1",
